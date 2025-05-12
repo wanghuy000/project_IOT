@@ -1,0 +1,17 @@
+{
+    "heart_rate": {
+        "value": 0,
+        "unit": "bpm",
+        "timestamp": "2024-03-21T10:30:00Z"
+    },
+    "fall_detection": {
+        "is_fallen": false,
+        "confidence": 0.0,
+        "timestamp": "2024-03-21T10:30:00Z"
+    },
+    "device_info": {
+        "device_id": "ESP32_001",
+        "battery_level": 100,
+        "signal_strength": -50
+    }
+} 

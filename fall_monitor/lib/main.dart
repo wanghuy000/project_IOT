@@ -70,13 +70,16 @@ class _MyHomePageState extends State<MyHomePage> {
 
   // Calculate glucose level based on heart rate and SpO2
   int _calculateGlucose(int heartRate, int spo2) {
-    // Giới hạn giá trị đầu vào
+    // Giới hạn giá trị đầu vào để đảm bảo an toàn
     heartRate = heartRate.clamp(60, 100);
     spo2 = spo2.clamp(95, 100);
     
-    // Tính toán glucose với công thức đã điều chỉnh
-    double glucose = 70 + (heartRate - 60) * 0.5 + (spo2 - 95) * 2;
-    return glucose.clamp(70, 140).round();
+    // Áp dụng công thức mới:
+    // 16714.61 + 0.47 * bpm - 351.045 * spo2 + 1.85 * (spo2 * spo2)
+    double glucose = 16714.61 + 0.47 * heartRate - 351.045 * spo2 + 1.85 * (spo2 * spo2);
+    
+    // Giới hạn kết quả trong khoảng hợp lý (70-140 mg/dL)
+    return glucose.clamp(70.0, 140.0).round();
   }
 
   @override

@@ -11,12 +11,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 class HealthMetrics {
   static const int minHeartRate = 60;
   static const int maxHeartRate = 100;
-  static const int minSpO2 = 95;
-  static const int maxSpO2 = 100;
-  static const int minGlucose = 70;
-  static const int maxGlucose = 140;
-  static const int warningGlucoseLow = 90;  // Cảnh báo khi glucose dưới 90
-  static const int warningGlucoseHigh = 130; // Cảnh báo khi glucose trên 130
 }
 
 void main() {

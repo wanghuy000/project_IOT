@@ -229,7 +229,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Widget _buildPulseWaveChart() {
     double minY = 0;
-    double maxY = 4095;
+    double maxY = 1023;
     return Card(
       elevation: 4,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
